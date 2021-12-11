@@ -321,8 +321,8 @@ function URLdownload(){
                             icon: {
                                 fillColor: "red",                                       //塗り潰し色
                                 fillOpacity: 2.0,                                       //塗り潰し透過率
-                                path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,     //円を指定
-                                scale: 4,                                               //円のサイズ
+                                path: google.maps.SymbolPath.CIRCLE,     //円を指定
+                                scale: 8,                                               //円のサイズ
                                 strokeColor: "red",                                     //枠の色
                                 strokeWeight: 1.5,                                      //枠の透過率
                                 rotation: car_ego_angle[car_loopcount[car_loop-1]]      //機首方向
@@ -635,11 +635,11 @@ function URLdownload(){
                                         map: map,
                                         position: car_tra_latlng[car_tra_loop_all[c]],
                                         icon: {
-                                            fillColor: "orange",                    //塗り潰し色
+                                            fillColor: "red",                    //塗り潰し色
                                             fillOpacity: 2.0,                       //塗り潰し透過率
                                             path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW, //円を指定
                                             scale: 4,                               //円のサイズ
-                                            strokeColor: "orange",                  //枠の色
+                                            strokeColor: "red",                  //枠の色
                                             strokeWeight: 1.5,                      //枠の透過率
                                             rotation: car_tra_angle[car_tra_loop_all[c]]                 //機首方向
                                         },
@@ -657,11 +657,11 @@ function URLdownload(){
                                         map: map,
                                         position: car_tra_latlng[car_tra_loop_all[c]],
                                         icon: {
-                                            fillColor: "orange",                    //塗り潰し色
+                                            fillColor: "red",                    //塗り潰し色
                                             fillOpacity: 2.0,                       //塗り潰し透過率
                                             path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW, //円を指定
                                             scale: 4,                               //円のサイズ
-                                            strokeColor: "orange",                  //枠の色
+                                            strokeColor: "red",                  //枠の色
                                             strokeWeight: 1.5,                      //枠の透過率
                                             rotation: car_tra_angle[car_tra_loop_all[c]]                 //機首方向
                                         },
@@ -682,11 +682,11 @@ function URLdownload(){
                                         map: map,
                                         position: car_tra_latlng[car_tra_loop_all[c]],
                                         icon: {
-                                            fillColor: "green",                    //塗り潰し色
+                                            fillColor: "blue",                    //塗り潰し色
                                             fillOpacity: 2.0,                       //塗り潰し透過率
                                             path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW, //円を指定
                                             scale: 4,                               //円のサイズ
-                                            strokeColor: "green",                  //枠の色
+                                            strokeColor: "blue",                  //枠の色
                                             strokeWeight: 1.5,                      //枠の透過率
                                             rotation: car_tra_angle[car_tra_loop_all[c]]                 //機首方向
                                         },
@@ -705,11 +705,11 @@ function URLdownload(){
                                         map: map,
                                         position: car_tra_latlng[car_tra_loop_all[c]],
                                         icon: {
-                                            fillColor: "green",                    //塗り潰し色
+                                            fillColor: "blue",                    //塗り潰し色
                                             fillOpacity: 2.0,                       //塗り潰し透過率
                                             path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW, //円を指定
                                             scale: 4,                               //円のサイズ
-                                            strokeColor: "green",                  //枠の色
+                                            strokeColor: "blue",                  //枠の色
                                             strokeWeight: 1.5,                      //枠の透過率
                                             rotation: car_tra_angle[car_tra_loop_all[c]]                 //機首方向
                                         },
