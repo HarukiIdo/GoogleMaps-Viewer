@@ -300,33 +300,44 @@ function URLdownload(){
                     /** 前時刻から現時刻に変わるときだけ以下の描画処理を行う */
                     if(car_loopcount[car_loop] != car_loopcount[car_loop-1]){
                         console.log(bike_ego_latlng[car_loopcount[car_loop-1]]);
+                        var icon1={
+                            url:'img/mount.png',
+                            scaledSize: new google.maps.Size(30,30),
+                        }
+                        var icon2={
+                            url:'img/mount2.png',
+                            scaledSize: new google.maps.Size(30,30),
+                        }
                         bike_markerego[new_loop] = new google.maps.Marker({
                             map: map,
                             position: bike_ego_latlng[car_loopcount[car_loop-1]],
-                            icon: {
-                                fillColor: "blue",                                      //塗り潰し色
-                                fillOpacity: 2.0,                                       //塗り潰し透過率
-                                path: google.maps.SymbolPath.CIRCLE,     //円を指定
-                                scale: 8,                                               //円のサイズ
-                                strokeColor: "blue",                                    //枠の色
-                                strokeWeight: 1.5,                                      //枠の透過率
-                                rotation: bike_ego_angle[car_loopcount[car_loop-1]]     //機首方向
-                            },
+                            icon: icon1,
+                            // {
+                            //     fillColor: "blue",                                      //塗り潰し色
+                            //     fillOpacity: 2.0,                                       //塗り潰し透過率
+                            //     path: mount3.svg,     //円を指定
+                            //     //path: google.maps.SymbolPath.CIRCLE,     //円を指定
+                            //     scale: 8,                                               //円のサイズ
+                            //     strokeColor: "blue",                                    //枠の色
+                            //     strokeWeight: 1.5,                                      //枠の透過率
+                            //     rotation: bike_ego_angle[car_loopcount[car_loop-1]]     //機首方向
+                            // },
                             draggable: true,
                             //   label: icon.label
                         }); 
                         car_markerego[new_loop] = new google.maps.Marker({
                             map: map,
                             position: car_ego_latlng[car_loopcount[car_loop-1]],
-                            icon: {
-                                fillColor: "red",                                       //塗り潰し色
-                                fillOpacity: 2.0,                                       //塗り潰し透過率
-                                path: google.maps.SymbolPath.CIRCLE,     //円を指定
-                                scale: 8,                                               //円のサイズ
-                                strokeColor: "red",                                     //枠の色
-                                strokeWeight: 1.5,                                      //枠の透過率
-                                rotation: car_ego_angle[car_loopcount[car_loop-1]]      //機首方向
-                            },
+                            icon: icon2,
+                            // {
+                            //     fillColor: "red",                                       //塗り潰し色
+                            //     fillOpacity: 2.0,                                       //塗り潰し透過率
+                            //     path: google.maps.SymbolPath.CIRCLE,                     //円を指定
+                            //     scale: 8,                                               //円のサイズ
+                            //     strokeColor: "red",                                     //枠の色
+                            //     strokeWeight: 1.5,                                      //枠の透過率
+                            //     rotation: car_ego_angle[car_loopcount[car_loop-1]]      //機首方向
+                            // },
                             draggable: true,
                             //   label: icon.label
                         });
