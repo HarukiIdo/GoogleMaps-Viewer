@@ -216,7 +216,7 @@ function initAutocomplete() {
              地図の種類を選択 
              ROADMAP：2D地図，SATELLITE：航空写真，HYBRID：航空写真と地形，TERRAIN：地形。
             */
-            mapTypeId: google.maps.MapTypeId.SATELLITE,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
             tilt: 45,
         };
 
@@ -311,33 +311,32 @@ function URLdownload(){
                         bike_markerego[new_loop] = new google.maps.Marker({
                             map: map,
                             position: bike_ego_latlng[car_loopcount[car_loop-1]],
-                            icon: icon1,
-                            // {
-                            //     fillColor: "blue",                                      //塗り潰し色
-                            //     fillOpacity: 2.0,                                       //塗り潰し透過率
-                            //     path: mount3.svg,     //円を指定
-                            //     //path: google.maps.SymbolPath.CIRCLE,     //円を指定
-                            //     scale: 8,                                               //円のサイズ
-                            //     strokeColor: "blue",                                    //枠の色
-                            //     strokeWeight: 1.5,                                      //枠の透過率
-                            //     rotation: bike_ego_angle[car_loopcount[car_loop-1]]     //機首方向
-                            // },
+                            icon: //icon1,
+                            {
+                                fillColor: "blue",                                      //塗り潰し色
+                                fillOpacity: 2.0,                                       //塗り潰し透過率
+                                path:google.maps.SymbolPath.CIRCLE,                       //円を指定
+                                scale: 8,                                               //円のサイズ
+                                strokeColor: "blue",                                    //枠の色
+                                strokeWeight: 1.5,                                      //枠の透過率
+                                rotation: bike_ego_angle[car_loopcount[car_loop-1]]     //機首方向
+                            },
                             draggable: true,
                             //   label: icon.label
                         }); 
                         car_markerego[new_loop] = new google.maps.Marker({
                             map: map,
                             position: car_ego_latlng[car_loopcount[car_loop-1]],
-                            icon: icon2,
-                            // {
-                            //     fillColor: "red",                                       //塗り潰し色
-                            //     fillOpacity: 2.0,                                       //塗り潰し透過率
-                            //     path: google.maps.SymbolPath.CIRCLE,                     //円を指定
-                            //     scale: 8,                                               //円のサイズ
-                            //     strokeColor: "red",                                     //枠の色
-                            //     strokeWeight: 1.5,                                      //枠の透過率
-                            //     rotation: car_ego_angle[car_loopcount[car_loop-1]]      //機首方向
-                            // },
+                            icon: //icon2,
+                            {
+                                fillColor: "red",                                       //塗り潰し色
+                                fillOpacity: 2.0,                                       //塗り潰し透過率
+                                path: google.maps.SymbolPath.CIRCLE,                     //円を指定
+                                scale: 8,                                               //円のサイズ
+                                strokeColor: "red",                                     //枠の色
+                                strokeWeight: 1.5,                                      //枠の透過率
+                                rotation: car_ego_angle[car_loopcount[car_loop-1]]      //機首方向
+                            },
                             draggable: true,
                             //   label: icon.label
                         });
@@ -858,7 +857,7 @@ function URLdownload(){
             }
         });
         //処理がすべて終了してから繰り返す
-        setTimeout(URLdownload, 1000);
+        setTimeout(URLdownload, 100);
     });
 } 
 
